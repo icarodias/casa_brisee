@@ -21,10 +21,10 @@ Road Map
 - [x] Wallet Page => Show wallet
 
 
-- [ ] Transaction Model
+- [x] DataBase
+- [x] Transaction Model
 - [ ] Transaction Controller
-- [ ] Store Model
+- [x] Store Model
 - [ ] Store Controller
-- [ ] Wallet Model
+- [x] Wallet Model
 - [ ] Wallet Controller
-- [ ] DataBase
