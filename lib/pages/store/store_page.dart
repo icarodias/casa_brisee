@@ -55,7 +55,6 @@ class _StorePageState extends State<StorePage> {
         backgroundColor: AppColors.primary,
         child: const Icon(Icons.create_rounded),
         onPressed: () {
-          debugPrint('Cliquei +');
           Navigator.pushReplacementNamed(context, '/store_form');
         },
       ),

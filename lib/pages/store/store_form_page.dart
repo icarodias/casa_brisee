@@ -73,8 +73,6 @@ class _StoreFormPageState extends State<StoreFormPage> {
           Navigator.pushReplacementNamed(context, '/store');
         },
         confirmOnPressed: () {
-          debugPrint('controller - ${controllersAmount.length}');
-          debugPrint('productList - ${productsList.length}');
           for (int i = 0; i < productsList.length; i++) {
             updateProductAmountById(
                 i + 1, int.parse(controllersAmount[i].text));
