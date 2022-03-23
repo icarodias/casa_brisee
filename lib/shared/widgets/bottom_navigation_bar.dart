@@ -3,8 +3,8 @@ import 'package:casa_brisee/shared/themes/app_images.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavagationBar extends StatelessWidget {
-  final page;
-  final heightAppBar;
+  final String page;
+  final double heightAppBar;
   const BottomNavagationBar(
       {Key? key, required this.page, required this.heightAppBar})
       : super(key: key);
@@ -43,7 +43,7 @@ class BottomNavagationBar extends StatelessWidget {
                   debugPrint('Clicou wallet');
                   Navigator.pushReplacementNamed(context, '/wallet');
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.attach_money_outlined,
                   color: AppColors.heading,
                   size: 30,
@@ -56,7 +56,7 @@ class BottomNavagationBar extends StatelessWidget {
                     debugPrint('Clicou store');
                     Navigator.pushReplacementNamed(context, '/store');
                   },
-                  icon: Icon(Icons.local_mall_outlined,
+                  icon: const Icon(Icons.local_mall_outlined,
                       color: AppColors.heading, size: 30)),
             ),
           ],
@@ -94,7 +94,7 @@ class BottomNavagationBar extends StatelessWidget {
                     debugPrint('Clicou wallet');
                     Navigator.pushReplacementNamed(context, '/wallet');
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.attach_money_outlined,
                     color: AppColors.shape,
                     size: 30,
@@ -108,7 +108,7 @@ class BottomNavagationBar extends StatelessWidget {
                     debugPrint('Clicou store');
                     Navigator.pushReplacementNamed(context, '/store');
                   },
-                  icon: Icon(Icons.local_mall_outlined,
+                  icon: const Icon(Icons.local_mall_outlined,
                       color: AppColors.heading, size: 30)),
             ),
           ],
@@ -140,7 +140,7 @@ class BottomNavagationBar extends StatelessWidget {
                 debugPrint('Clicou wallet');
                 Navigator.pushReplacementNamed(context, '/wallet');
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.attach_money_outlined,
                 color: AppColors.heading,
                 size: 30,
@@ -155,7 +155,7 @@ class BottomNavagationBar extends StatelessWidget {
                 debugPrint('Clicou store');
                 Navigator.pushReplacementNamed(context, '/store');
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.local_mall_outlined,
                 color: AppColors.shape,
                 size: 30,

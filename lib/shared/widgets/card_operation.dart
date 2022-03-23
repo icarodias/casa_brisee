@@ -10,7 +10,7 @@ class CardOperation extends StatelessWidget {
   //final type;
   const CardOperation({
     Key? key,
-    required Operation this.operation,
+    required this.operation,
     //required String this.date,
     //required String this.description,
     //required num this.valueBare,
@@ -21,11 +21,11 @@ class CardOperation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width,
       child: Card(
         child: Padding(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -17,7 +17,7 @@ class AppBarCasaBrisee extends StatelessWidget {
         child: ListTile(
           title: Text("Casa Brisée", style: TextStyles.titleRegular),
           subtitle: Text(title, style: TextStyles.titleHome),
-          trailing: Container(
+          trailing: SizedBox(
             height: 50,
             width: 50,
             child: Image.asset(

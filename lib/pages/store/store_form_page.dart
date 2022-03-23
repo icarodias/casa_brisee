@@ -30,7 +30,7 @@ class _StoreFormPageState extends State<StoreFormPage> {
         width: size.width,
         height: size.height,
         //color: AppColors.secondary,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -46,7 +46,7 @@ class _StoreFormPageState extends State<StoreFormPage> {
               final List<Product> products = snapshot.data as List<Product>;
               // colocando lista e controller para fora do escopo future
 
-              if (productsList.length == 0) {
+              if (productsList.isEmpty) {
                 for (int i = 0; i < products.length; i++) {
                   productsList.add(products[i]);
                   controllersAmount.add(

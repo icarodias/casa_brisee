@@ -3,7 +3,7 @@ import 'package:casa_brisee/Model/store_database.dart';
 import 'package:casa_brisee/Model/wallet_database.dart';
 import 'package:casa_brisee/shared/themes/app_images.dart';
 
-void start_database(bool isThereNoProduct) {
+void startDatabase(bool isThereNoProduct) {
   if (isThereNoProduct) {
     createWallet(0);
     //miniquiches
@@ -79,7 +79,5 @@ void start_database(bool isThereNoProduct) {
         amount: 0,
         price: 60,
         pathImage: AppImages.tortaFrango));
-
-    print('Banco criado');
   }
 }

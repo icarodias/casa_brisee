@@ -33,15 +33,15 @@ class _CardFormProductState extends State<CardFormProduct> {
               widget.product.name,
               style: TextStyles.titleListTile,
             ),
-            Container(
+            SizedBox(
               width: size.width / 8,
               child: TextFormField(
                 showCursor: false,
                 style: TextStyles.buttonGray,
                 textAlign: TextAlign.center,
                 controller: widget.controller,
-                decoration: InputDecoration(
-                  border: const OutlineInputBorder(),
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
                   //focusColor: AppColors.primary,
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(

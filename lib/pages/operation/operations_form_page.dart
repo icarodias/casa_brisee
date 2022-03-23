@@ -131,182 +131,175 @@ class _OperationsFormPageState extends State<OperationsFormPage> {
             child: Padding(
               padding: const EdgeInsets.only(
                   top: 12, right: 12, left: 12, bottom: 0),
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 16, bottom: 0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                isSwitched ? 'Compra' : 'Venda',
-                                style: TextStyle(
-                                    color: AppColors.primary, fontSize: 20),
-                              ),
-                              Switch(
-                                value: isSwitched,
-                                activeColor: AppColors.primary,
-                                onChanged: (bool value) {
-                                  if (value) {
-                                    isSwitched = true;
-                                  } else {
-                                    isSwitched = false;
-                                  }
-                                  setState(() {});
-                                },
-                              ),
-                            ],
-                          ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16, bottom: 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              isSwitched ? 'Compra' : 'Venda',
+                              style: const TextStyle(
+                                  color: AppColors.primary, fontSize: 20),
+                            ),
+                            Switch(
+                              value: isSwitched,
+                              activeColor: AppColors.primary,
+                              onChanged: (bool value) {
+                                if (value) {
+                                  isSwitched = true;
+                                } else {
+                                  isSwitched = false;
+                                }
+                                setState(() {});
+                              },
+                            ),
+                          ],
                         ),
-                        isSwitched
-                            ? (Form(
-                                key: _formCompra,
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 20),
-                                      child: TextFormField(
-                                        enabled: isSwitched,
-                                        showCursor: false,
-                                        controller: _description,
-                                        style: TextStyles.buttonGray,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          //focusColor: AppColors.primary,
-                                          labelText: 'Descrição',
-                                          labelStyle:
-                                              TextStyles.buttonBoldPrimary,
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColors.primary,
-                                            ),
+                      ),
+                      isSwitched
+                          ? (Form(
+                              key: _formCompra,
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: TextFormField(
+                                      enabled: isSwitched,
+                                      showCursor: false,
+                                      controller: _description,
+                                      style: TextStyles.buttonGray,
+                                      decoration: InputDecoration(
+                                        border: const OutlineInputBorder(),
+                                        //focusColor: AppColors.primary,
+                                        labelText: 'Descrição',
+                                        labelStyle:
+                                            TextStyles.buttonBoldPrimary,
+                                        focusedBorder: const OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: AppColors.primary,
                                           ),
                                         ),
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Informe a descrição';
-                                          }
-                                        },
                                       ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return 'Informe a descrição';
+                                        }
+                                      },
                                     ),
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 20),
-                                      child: TextFormField(
-                                        enabled: isSwitched,
-                                        showCursor: false,
-                                        controller: _valor,
-                                        style: TextStyles.buttonGray,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          //focusColor: AppColors.primary,
-                                          labelText: 'Valor',
-                                          labelStyle:
-                                              TextStyles.buttonBoldPrimary,
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColors.primary,
-                                            ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20),
+                                    child: TextFormField(
+                                      enabled: isSwitched,
+                                      showCursor: false,
+                                      controller: _valor,
+                                      style: TextStyles.buttonGray,
+                                      decoration: InputDecoration(
+                                        border: const OutlineInputBorder(),
+                                        //focusColor: AppColors.primary,
+                                        labelText: 'Valor',
+                                        labelStyle:
+                                            TextStyles.buttonBoldPrimary,
+                                        focusedBorder: const OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: AppColors.primary,
                                           ),
                                         ),
-                                        keyboardType: TextInputType.number,
-                                        inputFormatters: [
-                                          FilteringTextInputFormatter.allow(
-                                              RegExp(r'[0-9]|[.]|[-]')),
-                                        ],
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Informe o valor da Compra';
-                                          }
-                                        },
                                       ),
+                                      keyboardType: TextInputType.number,
+                                      inputFormatters: [
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp(r'[0-9]|[.]|[-]')),
+                                      ],
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return 'Informe o valor da Compra';
+                                        }
+                                      },
                                     ),
-                                  ],
-                                ),
-                              ))
-                            : (Form(
-                                key: _formVenda,
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 16),
-                                      child: TextFormField(
-                                        enabled: !isSwitched,
-                                        showCursor: false,
-                                        controller: _cliente,
-                                        style: TextStyles.buttonGray,
-                                        decoration: InputDecoration(
-                                          border: OutlineInputBorder(),
-                                          //focusColor: AppColors.primary,
-                                          labelText: 'Cliente',
-                                          labelStyle:
-                                              TextStyles.buttonBoldPrimary,
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color: AppColors.primary,
-                                            ),
+                                  ),
+                                ],
+                              ),
+                            ))
+                          : (Form(
+                              key: _formVenda,
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 16),
+                                    child: TextFormField(
+                                      enabled: !isSwitched,
+                                      showCursor: false,
+                                      controller: _cliente,
+                                      style: TextStyles.buttonGray,
+                                      decoration: InputDecoration(
+                                        border: const OutlineInputBorder(),
+                                        //focusColor: AppColors.primary,
+                                        labelText: 'Cliente',
+                                        labelStyle:
+                                            TextStyles.buttonBoldPrimary,
+                                        focusedBorder: const OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: AppColors.primary,
                                           ),
                                         ),
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Informe o cliente';
-                                          }
-                                        },
                                       ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return 'Informe o cliente';
+                                        }
+                                      },
                                     ),
-                                    Container(
-                                      height: size.height * 0.7 * 0.74,
-                                      child: FutureBuilder<List<Product>>(
-                                        initialData: const [],
-                                        future: findAllProducts(),
-                                        builder: (context, snapshot) {
-                                          final List<Product> products =
-                                              snapshot.data as List<Product>;
-                                          //colocando a lista de productos no escopo de fora do future
-                                          if (productsList.isEmpty) {
-                                            for (int i = 0;
-                                                i < products.length;
-                                                i++) {
-                                              productsList.add(products[i]);
-                                              controllersProduct.add(
-                                                  TextEditingController(
-                                                      text: ""));
-                                            }
+                                  ),
+                                  SizedBox(
+                                    height: size.height * 0.7 * 0.74,
+                                    child: FutureBuilder<List<Product>>(
+                                      initialData: const [],
+                                      future: findAllProducts(),
+                                      builder: (context, snapshot) {
+                                        final List<Product> products =
+                                            snapshot.data as List<Product>;
+                                        //colocando a lista de productos no escopo de fora do future
+                                        if (productsList.isEmpty) {
+                                          for (int i = 0;
+                                              i < products.length;
+                                              i++) {
+                                            productsList.add(products[i]);
+                                            controllersProduct.add(
+                                                TextEditingController(
+                                                    text: ""));
                                           }
-                                          return Container(
-                                            child: ListView.builder(
-                                                scrollDirection: Axis.vertical,
-                                                shrinkWrap: true,
-                                                itemCount: products.length,
-                                                itemBuilder: (context, index) {
-                                                  final int i = index;
-                                                  final Product product =
-                                                      products[i];
-                                                  final card = CardFormOperation(
-                                                      controller:
-                                                          controllersProduct[i],
-                                                      product: product,
-                                                      isSwitched: isSwitched);
-                                                  return card;
-                                                }),
-                                          );
-                                        },
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ))
-                      ],
-                    ),
-                  ],
-                ),
+                                        }
+                                        return ListView.builder(
+                                            scrollDirection: Axis.vertical,
+                                            shrinkWrap: true,
+                                            itemCount: products.length,
+                                            itemBuilder: (context, index) {
+                                              final int i = index;
+                                              final Product product =
+                                                  products[i];
+                                              final card = CardFormOperation(
+                                                  controller:
+                                                      controllersProduct[i],
+                                                  product: product,
+                                                  isSwitched: isSwitched);
+                                              return card;
+                                            });
+                                      },
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ))
+                    ],
+                  ),
+                ],
               ),
             ),
           ),

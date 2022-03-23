@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:casa_brisee/Model/product.dart';
 import 'package:casa_brisee/Model/store_database.dart';
 import 'package:casa_brisee/shared/themes/app_colors.dart';
-import 'package:casa_brisee/shared/themes/app_images.dart';
 import 'package:casa_brisee/shared/widgets/appBar.dart';
 import 'package:casa_brisee/shared/widgets/bottom_navigation_bar.dart';
 import 'package:casa_brisee/shared/widgets/list_store.dart';
@@ -32,7 +31,7 @@ class _StorePageState extends State<StorePage> {
         width: size.width,
         height: size.height,
         //color: AppColors.secondary,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,

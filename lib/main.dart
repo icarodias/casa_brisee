@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     int numberOfProduct = await numberOfProducts();
     debugPrint("$numberOfProduct");
     Future.delayed(const Duration(milliseconds: 500),
-        () => {start_database(numberOfProduct == 0)});
+        () => {startDatabase(numberOfProduct == 0)});
   }
 
   @override

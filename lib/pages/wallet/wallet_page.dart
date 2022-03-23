@@ -13,7 +13,6 @@ class WalletPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final heightAppBar = size.height * 0.08;
-    double saldo = 43;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(size.height),
@@ -32,7 +31,7 @@ class WalletPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             const Text(
               'Saldo',
               style: TextStyle(color: AppColors.grey, fontSize: 26.72),

@@ -13,6 +13,7 @@ class Product {
     required this.pathImage,
   });
 
+  @override
   String toString() =>
       'Product{id:$id, name:$name, amount:$amount, price:$price, pathImage:$pathImage}';
 

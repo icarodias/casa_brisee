@@ -29,7 +29,7 @@ class _CardFormOperationState extends State<CardFormOperation> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(widget.product.name, style: TextStyles.buttonBoldPrimary),
-          Container(
+          SizedBox(
             width: size.width / 7,
             child: TextFormField(
               textAlign: TextAlign.center,
@@ -37,7 +37,7 @@ class _CardFormOperationState extends State<CardFormOperation> {
               showCursor: false,
               controller: widget.controller,
               style: TextStyles.buttonGray,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(

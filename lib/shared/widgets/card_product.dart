@@ -5,17 +5,16 @@ import 'package:casa_brisee/Model/product.dart';
 class CardProduct extends StatelessWidget {
   final Product product;
 
-  const CardProduct({Key? key, required Product this.product})
-      : super(key: key);
+  const CardProduct({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width,
       child: Card(
         child: Padding(
-          padding: EdgeInsets.all(7),
+          padding: const EdgeInsets.all(7),
           child: ListTile(
             title: Padding(
               padding: const EdgeInsets.only(bottom: 5.0),
@@ -37,7 +36,7 @@ class CardProduct extends StatelessWidget {
                 ),
               ],
             ),
-            trailing: Container(
+            trailing: SizedBox(
               height: 48,
               width: 48,
               child: ClipRRect(

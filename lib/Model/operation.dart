@@ -14,12 +14,13 @@ class Operation {
   }
 
   Operation({
-    required int this.id,
-    required String this.description,
-    required double this.value,
-    required int this.type,
+    required this.id,
+    required this.description,
+    required this.value,
+    required this.type,
   });
 
+  @override
   String toString() =>
       'Product{id:$id, type:$type ($typeDescription), description:$description, value:$value, date:$today}';
 

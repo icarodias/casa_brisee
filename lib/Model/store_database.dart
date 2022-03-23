@@ -10,7 +10,6 @@ Future<int> create(Product product) async {
   productMap['amount'] = product.amount;
   productMap['price'] = product.price;
   productMap['path_image'] = product.pathImage;
-  print(productMap.toString());
   return db.insert('products', productMap);
 }
 

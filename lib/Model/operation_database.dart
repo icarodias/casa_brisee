@@ -4,7 +4,7 @@ import 'package:sqflite/sqflite.dart';
 
 Future<int> save(Operation operation) async {
   final Database db = await getDatabase();
-  final Map<String, dynamic> operationMap = Map();
+  final Map<String, dynamic> operationMap = {};
   operationMap['description'] = operation.description;
   operationMap['value'] = operation.value;
   operationMap['type'] = operation.type;
@@ -24,9 +24,7 @@ Future<List<Operation>> findAllOperations() async {
         value: row['value']);
     operations.add(operation);
   }
-  for (Operation operation in operations) {
-    print(operation.toString());
-  }
+
   return operations;
 }
 
@@ -66,7 +64,6 @@ Future<void> keepNumberOfOperationsFixed(int valueFixed) async {
   final List<Map<String, dynamic>> result = await db.query('operations');
   final numberOfOperations = result.length;
   if (numberOfOperations > valueFixed) {
-    print("entrei no keep");
     await deleteOperationById(1);
     await restartOperationId();
   }

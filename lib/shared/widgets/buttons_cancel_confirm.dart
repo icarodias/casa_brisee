@@ -17,27 +17,27 @@ class ButtonsCancelAndConfirm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: size.height * 0.12,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               width: size.width / 2.2,
               child: ElevatedButton(
                 onPressed: cancelOnPressed,
                 style: ElevatedButton.styleFrom(
                   primary: AppColors.shape,
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  side: BorderSide(color: AppColors.delete, width: 1.5),
+                  side: const BorderSide(color: AppColors.delete, width: 1.5),
                 ),
-                child:
-                    Text('Cancelar', style: TextStyle(color: AppColors.delete)),
+                child: const Text('Cancelar',
+                    style: TextStyle(color: AppColors.delete)),
               ),
             ),
-            Container(
+            SizedBox(
               width: (size.width) / 2.2,
               child: ElevatedButton(
                 onPressed: confirmOnPressed,

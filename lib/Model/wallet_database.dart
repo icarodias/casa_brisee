@@ -5,9 +5,8 @@ import 'package:casa_brisee/Model/database.dart';
 //CREATE
 Future<int> createWallet(double initValue) async {
   final Database db = await getDatabase();
-  final Map<String, dynamic> walletMap = Map();
+  final Map<String, dynamic> walletMap = {};
   walletMap['money'] = initValue;
-  print(walletMap.toString());
   return db.insert('wallet', walletMap);
 }
 
