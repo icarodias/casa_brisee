@@ -50,7 +50,7 @@ class WalletPage extends StatelessWidget {
                   );
                 }),
             SizedBox(height: size.height * 0.1),
-            Text("ID_PROJECTS", style: TextStyles.captionBody),
+            Text("Autor: Ícaro Dias", style: TextStyles.captionBody),
           ],
         ),
       ),
