@@ -33,6 +33,7 @@ Além disso, busquei informações em diversos locais para criar os widgets:
 * Persistência de dados com Flutter (Alura)
 ----
 Perspectivas futuras desta aplicação, adição de novas funcionalidades:
+* Refatoração do código.
 * Alteração de preços em estoque.
 * Adição e remoção de produtos.
 * Encomendas - vendas - serem convertidas em saldo no dia da encomenda.
